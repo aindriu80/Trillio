@@ -32,6 +32,10 @@ Grey dark 3: #999
 
 }
 
+$bp-largest: 75em;     // 1200px divide by 16 equals 75 (em)
+$bp-large: 68.75em;     // 1100px / 16
+$bp-medium: 56.25em;    // 900px / 16
+
 *{
     margin: 0;
     padding: 0;
@@ -45,6 +49,10 @@ Grey dark 3: #999
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 Rem = 10px, 10px(target)/16px(default) = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body{
